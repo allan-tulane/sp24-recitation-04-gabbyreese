@@ -1,6 +1,6 @@
 # CMPS 2200  Recitation 04
 
-**Name (Team Member 1):**_________________________  
+**Name (Team Member 1):** Gabby Reese
 **Name (Team Member 2):**_________________________
 
 
@@ -36,7 +36,7 @@ To use this function to count words, you'll need to implement your own `map_f` a
 
 4. Assume that a word `w` appears `n` times. What is the **work** and **span** of `word_count_reduce` for this word, assuming a parallel implementation of the `reduce` function?
 
-**Enter answer here**
+The work for this function is equal to W(n) = 2W(n/2)+1+1, which results in O(n). The span for this function is equal to O(logn) because of the use of the reduce function.
 
 
 5. Why are we going through all this trouble? Couldn't I just use this function to count words?
@@ -52,7 +52,7 @@ for doc in docs:
 
 What is the problem that prevents us from easily parallelizing this solution?
 
-**Enter answer here**
+The function occurs in a sequential manner in a for loop. The count is stored outside the for loop, so multiple parallel computers could be trying to update the value at the same time. 
 
 
 ## Part 2: Sentiment analysis
